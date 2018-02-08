@@ -212,7 +212,7 @@ public class CordovaBinder {
             }
         });
         ctr.deletePluginBtn.setOnAction((ActionEvent e) -> {
-            if(UIutils.isTextEmpty(ctr.cordovaModel.getPluginPath())){
+            if(UIutils.isTextEmpty(ctr.cordovaModel.getPluginId())){
                 UIutils.showDialog("插件id为空");
                 return;
             }
