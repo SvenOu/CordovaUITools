@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" build-on-make="true" name="CordovaUITools">
+    <output-path>$PROJECT_DIR$/out/artifacts/CordovaUITools</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="main.Main" />
+        <option name="description" value="coedova tools" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="coedova tools" />
+        <option name="vendor" value="coedova tools" />
+        <option name="version" value="0.0.1" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="CordovaUITools.jar">
+        <element id="module-output" name="CordovaUITools" />
+        <element id="file-copy" path="$PROJECT_DIR$/libs/jackson-annotations-2.9.4.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/libs/jackson-core-2.9.4.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/libs/jackson-databind-2.9.4.jar" />
+      </element>
+    </root>
+  </artifact>
+</component>
