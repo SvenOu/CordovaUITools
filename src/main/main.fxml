@@ -83,6 +83,8 @@
 
                             <HBox alignment="CENTER_LEFT" spacing="10">
                                 <Button fx:id="runAndroidBtn" text="Run Android（只支持连接了一个设备的状况，程序无法帮你选择手机）" />
+                                <Label minWidth="25" />
+                                <Button fx:id="openProjectDirBtn" text="打开项目文件夹" />
                             </HBox>
 
                             <padding>

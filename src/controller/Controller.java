@@ -44,6 +44,7 @@ public class Controller {
     public Button addCordovaBtn;
     public Button addIonicCordovaBtn;
     public Button openCmdBtn;
+    public Button openProjectDirBtn;
 
     /* cordova view end*/
     private Logger logger =  Logger.getLogger(Controller.class.getName());

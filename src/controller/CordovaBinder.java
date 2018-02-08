@@ -10,7 +10,9 @@ import utils.CommandCreator;
 import utils.JobTask;
 import utils.UIutils;
 
+import java.awt.*;
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,7 +27,7 @@ public class CordovaBinder {
     }
 
     private void runCMDBatch(List<String> commands, File logFile) {
-
+        ctr.consoleText.setText("");
         UIutils.runCMDBatch(commands, logFile, new UIutils.RunCmdCallBack() {
             private long time = System.currentTimeMillis();
             private String tempStr = "";
@@ -366,6 +368,19 @@ public class CordovaBinder {
                     runCMDBatch(cmmands, ctr.persistenceSaver.getFile(PersistenceSaver.SYSTEM_CONSOLE_TEMP_SAVE_PATH));
                     ctr.saveModels();
                     refreshFields();
+                    return null;
+                }
+            }.excuteJob();
+        });
+        ctr.openProjectDirBtn.setOnAction((ActionEvent e) -> {
+            new JobTask<Void>(){
+                @Override
+                public Void onCall() {
+                    try {
+                        Desktop.getDesktop().open(new File(ctr.cordovaModel.getProjectPath()));
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                     return null;
                 }
             }.excuteJob();
