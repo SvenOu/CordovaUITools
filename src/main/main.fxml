@@ -86,7 +86,7 @@
                                 <Button fx:id="openProjectDirBtn" text="打开项目文件夹" />
                             </HBox>
                             <VBox alignment="CENTER_LEFT" spacing="10">
-                                <Label style="-fx-text-fill: red; -fx-font-size: 20" text="如果运行期间出现莫名其妙的问题，打开任务管理器.把Java.exe统统结束掉" />
+                                <Label style="-fx-text-fill: red; -fx-font-size: 20" text="如果运行期间出现莫名其妙的问题，打开任务管理器.把java.exe和javaw.exe通通结束掉" />
                             </VBox>
 
                             <padding>
