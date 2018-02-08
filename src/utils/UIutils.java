@@ -30,7 +30,7 @@ public class UIutils {
             commandStr.append(" && ").append(commands.get(i));
         }
         if(callback != null){
-            callback.onReadline(commandStr.toString());
+            callback.onReadline(commandStr.toString() +"\n");
         }
         try {
             Runtime rt = Runtime.getRuntime();
