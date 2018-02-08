@@ -1,6 +1,7 @@
 package main;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -23,6 +24,8 @@ public class Main extends Application {
         primaryStage.setOnCloseRequest(event -> {
             try {
                 stop();
+                Platform.exit();
+                System.exit(0);
             } catch (Exception e) {
                 e.printStackTrace();
             }
