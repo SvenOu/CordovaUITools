@@ -1,1 +1,0 @@
-{"projectParentFloderPath":"D:\\codova_wokrspace","createProjectName":"","projectPath":"D:\\codova_wokrspace\\Test5","pluginPath":"D:\\codova_plugins_wokrspace\\Americana-Leader-App\\doc\\cordova_local_plugin\\kudu-powerup","cordovaAndroidVersion":"7.0.0","cordovaIOSVersion":"","projectType":"cordova","pluginId":"com.kudupowerup"}
