@@ -19,7 +19,7 @@ public class JobExecutor implements Executor {
 
     private final BlockingQueue<Runnable> workQueue;
 
-    private final ThreadPoolExecutor threadPoolExecutor;
+    private ThreadPoolExecutor threadPoolExecutor;
 
     private final ThreadFactory threadFactory;
 
@@ -54,5 +54,8 @@ public class JobExecutor implements Executor {
         public Thread newThread(Runnable runnable) {
             return new Thread(runnable, THREAD_NAME + counter++);
         }
+    }
+    public void shutdownNow(){
+        this.threadPoolExecutor.shutdownNow();
     }
 }

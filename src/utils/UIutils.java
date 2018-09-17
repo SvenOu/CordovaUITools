@@ -50,7 +50,7 @@ public class UIutils {
             fw.close();
             int exitVal = pr.waitFor();
             System.out.println("Exited with error code "+exitVal);
-
+            pr.destroy();
         } catch(Exception e) {
             System.out.println(e.toString());
             e.printStackTrace();

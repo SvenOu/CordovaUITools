@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import utils.JobExecutor;
 
 public class Main extends Application {
     private static final int width = 1200;
@@ -24,6 +25,7 @@ public class Main extends Application {
         primaryStage.setOnCloseRequest(event -> {
             try {
                 stop();
+                JobExecutor.getInstance().shutdownNow();
                 Platform.exit();
                 System.exit(0);
             } catch (Exception e) {
