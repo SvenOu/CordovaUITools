@@ -15,7 +15,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        primaryStage = primaryStage;
+        stage = primaryStage;
         Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
         primaryStage.setTitle("Ionic Cordova 快捷工具");
         primaryStage.setScene(new Scene(root, width, height));
