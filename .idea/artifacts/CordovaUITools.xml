@@ -3,7 +3,7 @@
     <output-path>$PROJECT_DIR$/out/artifacts/CordovaUITools</output-path>
     <properties id="javafx-properties">
       <options>
-        <option name="appClass" value="main.Main" />
+        <option name="appClass" value="com.sven.cordovauitools.CordovaUIToolsApp" />
         <option name="description" value="coedova tools" />
         <option name="htmlPlaceholderId" value="" />
         <option name="title" value="coedova tools" />
