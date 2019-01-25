@@ -1,4 +1,4 @@
-package utils;
+package com.sven.cordovauitools.utils;
 
 
 import com.fasterxml.jackson.core.JsonParseException;

@@ -1,13 +1,13 @@
-package controller;
+package com.sven.cordovauitools.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
-import main.PersistenceSaver;
-import model.CordovaModel;
+import com.sven.cordovauitools.main.PersistenceSaver;
+import com.sven.cordovauitools.model.CordovaModel;
 
-import model.SystemModel;
-import utils.JobTask;
+import com.sven.cordovauitools.model.SystemModel;
+import com.sven.cordovauitools.utils.JobTask;
 
 import java.util.logging.Logger;
 

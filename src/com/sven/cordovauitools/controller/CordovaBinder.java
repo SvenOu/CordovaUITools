@@ -1,14 +1,14 @@
-package controller;
+package com.sven.cordovauitools.controller;
 
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.stage.DirectoryChooser;
-import main.Main;
-import main.PersistenceSaver;
-import utils.CommandCreator;
-import utils.JobTask;
-import utils.UIutils;
+import com.sven.cordovauitools.CordovaUIToolsApp;
+import com.sven.cordovauitools.main.PersistenceSaver;
+import com.sven.cordovauitools.utils.CommandCreator;
+import com.sven.cordovauitools.utils.JobTask;
+import com.sven.cordovauitools.utils.UIutils;
 
 import java.awt.*;
 import java.io.File;
@@ -66,7 +66,7 @@ public class CordovaBinder {
         ctr.selectParentFloderBtn.setOnAction((ActionEvent e) -> {
             DirectoryChooser directoryChooser = new DirectoryChooser();
             directoryChooser.setTitle("选择父层文件夹");
-            File file = directoryChooser.showDialog(Main.getStage());
+            File file = directoryChooser.showDialog(CordovaUIToolsApp.getStage());
             if (null == file) {
                 UIutils.showDialog("必须选择一个文件夹");
                 return;
@@ -127,7 +127,7 @@ public class CordovaBinder {
         ctr.selectProjectBtn.setOnAction((ActionEvent e) -> {
             DirectoryChooser directoryChooser = new DirectoryChooser();
             directoryChooser.setTitle("选择Cordova项目文件夹");
-            File file = directoryChooser.showDialog(Main.getStage());
+            File file = directoryChooser.showDialog(CordovaUIToolsApp.getStage());
             if (null == file) {
                 UIutils.showDialog("必须选择一个文件夹");
                 return;

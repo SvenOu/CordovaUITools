@@ -1,4 +1,4 @@
-package utils;
+package com.sven.cordovauitools.utils;
 
 import javafx.scene.control.Alert;
 

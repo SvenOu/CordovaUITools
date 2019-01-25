@@ -1,4 +1,4 @@
-package model;
+package com.sven.cordovauitools.model;
 
 public class SystemModel{
     private int selectTabIndex;

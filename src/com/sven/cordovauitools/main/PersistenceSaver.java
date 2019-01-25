@@ -1,6 +1,6 @@
-package main;
+package com.sven.cordovauitools.main;
 
-import utils.Jackson2Util;
+import com.sven.cordovauitools.utils.Jackson2Util;
 
 import java.io.*;
 

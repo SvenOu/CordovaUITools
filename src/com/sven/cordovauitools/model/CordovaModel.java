@@ -1,6 +1,6 @@
-package model;
+package com.sven.cordovauitools.model;
 
-import main.PersistenceSaver;
+import com.sven.cordovauitools.main.PersistenceSaver;
 
 public class CordovaModel {
     private String projectParentFloderPath;

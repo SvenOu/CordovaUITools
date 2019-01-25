@@ -1,14 +1,14 @@
-package main;
+package com.sven.cordovauitools;
 
+import com.sven.cordovauitools.utils.JobExecutor;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import utils.JobExecutor;
 
-public class Main extends Application {
+public class CordovaUIToolsApp extends Application {
     private static final int width = 1200;
     private static final int height = 600;
     private static Stage stage;
@@ -16,7 +16,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         stage = primaryStage;
-        Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("view/main.fxml"));
         primaryStage.setTitle("Ionic Cordova 快捷工具");
         primaryStage.setScene(new Scene(root, width, height));
         primaryStage.setResizable(false);
