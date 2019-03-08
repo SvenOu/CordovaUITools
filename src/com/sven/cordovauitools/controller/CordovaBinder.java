@@ -1,5 +1,8 @@
 package com.sven.cordovauitools.controller;
 
+import com.sven.cordovauitools.bean.JavaProcess;
+import com.sven.cordovauitools.utils.JavaProcessHelper;
+import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
@@ -63,6 +66,26 @@ public class CordovaBinder {
     }
 
     private void bindFields() {
+        ctr.forceCleanGradleTaskBtn.setOnAction((ActionEvent e) -> {
+            new loadingTask<Void>(){
+                @Override
+                public Void onCall() {
+                    clearGradleTasks();
+                    return null;
+                }
+
+                @Override
+                protected void onDone(Void aVoid) {
+                    super.onDone(aVoid);
+                    Platform.runLater(new Runnable(){
+                        @Override
+                        public void run() {
+                            UIutils.showDialog("Message","清理gradle任务完成.");
+                        }
+                    });
+                }
+            }.excuteJob();
+        });
         ctr.selectParentFloderBtn.setOnAction((ActionEvent e) -> {
             DirectoryChooser directoryChooser = new DirectoryChooser();
             directoryChooser.setTitle("选择父层文件夹");
@@ -331,6 +354,7 @@ public class CordovaBinder {
                     runCMDBatch(cmmands, ctr.persistenceSaver.getFile(PersistenceSaver.SYSTEM_CONSOLE_TEMP_SAVE_PATH));
                     ctr.saveModels();
                     refreshFields();
+                    clearGradleTasks();
                     return null;
                 }
             }.excuteJob();
@@ -385,6 +409,14 @@ public class CordovaBinder {
                 }
             }.excuteJob();
         });
+    }
+
+    private void clearGradleTasks() {
+        List<JavaProcess> gradleTasks = JavaProcessHelper.findProcessList(
+                "org.gradle.launcher.daemon.bootstrap.GradleDaemon");
+        for (JavaProcess p: gradleTasks) {
+            JavaProcessHelper.killProcess(p.getPid());
+        }
     }
 
     private void refreshFields() {

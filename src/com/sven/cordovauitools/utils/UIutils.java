@@ -7,12 +7,16 @@ import java.util.List;
 
 public class UIutils {
 
-    public static void showDialog(String text) {
+    public static void showDialog(String title,String text) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("错误");
+        alert.setTitle(title);
         alert.setHeaderText(null);
         alert.setContentText(text);
         alert.showAndWait();
+    }
+
+    public static void showDialog(String text) {
+        showDialog("错误", text);
     }
 
     public static boolean isTextEmpty(String projectName) {

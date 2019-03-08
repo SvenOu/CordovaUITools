@@ -45,6 +45,7 @@ public class Controller {
     public Button addIonicCordovaBtn;
     public Button openCmdBtn;
     public Button openProjectDirBtn;
+    public Button forceCleanGradleTaskBtn;
 
     /* cordova view end*/
     private Logger logger =  Logger.getLogger(Controller.class.getName());

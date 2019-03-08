@@ -1,1 +1,1 @@
-{"projectParentFloderPath":null,"createProjectName":null,"projectPath":null,"pluginPath":null,"cordovaAndroidVersion":null,"cordovaIOSVersion":null,"projectType":"cordova","pluginId":null}
+{"projectParentFloderPath":"D:\\codova_plugins_wokrspace","createProjectName":"file_manager_plugin_test","projectPath":"D:\\codova_plugins_wokrspace\\file_manager_plugin_test","pluginPath":"D:\\codova_plugins_wokrspace\\SandboxFileServer","cordovaAndroidVersion":"","cordovaIOSVersion":null,"projectType":"cordova","pluginId":"com.rvtpowerup 0.0.1 \"SandboxFileServer Plugin\""}
